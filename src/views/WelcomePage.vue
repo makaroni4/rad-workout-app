@@ -40,7 +40,7 @@
             </div>
 
             <div class="welcome-page__video-reference">
-              RAD workout app was inspired by <a href="#">this Youtube video</a>.
+              RAD workout app was inspired by <a href="https://youtu.be/7eyNh8_MGF4?t=537" target="_blank">this Youtube video</a>.
             </div>
           </div>
         </div>

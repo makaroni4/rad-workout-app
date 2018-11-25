@@ -6,7 +6,7 @@
         v-bind:enter-active-class="fadeInCssClass"
         v-bind:leave-active-class="fadeOutCssClass"
       >
-        <p class="arrows-page__arrow" v-if="showArrow">
+        <p class="arrows-page__arrow" v-if="showArrow || paused">
           {{ upcaseArrow }}
         </p>
       </transition>
