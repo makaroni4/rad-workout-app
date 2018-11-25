@@ -23,13 +23,11 @@
 
           <div class="welcome-page__cta">
             <div class="welcome-page__btn">
-              <router-link to="/countdown">
-                <Btn text="Start Workout" />
-              </router-link>
+              <Btn text="Start Workout" @click.native="startWorkout" />
             </div>
 
-            <div class="welcome-page__workouts-count">
-              <strong>12885</strong> workouts so far
+            <div class="welcome-page__workouts-count" v-if="workoutsCount">
+              <strong>{{ workoutsCount }}</strong> workouts so far
             </div>
           </div>
         </div>
@@ -50,16 +48,30 @@
 </template>
 
 <script>
+import router from "@/router.js";
 import Btn from '@/components/Btn';
 
 export default {
   name: "WelcomePage",
   data() {
     return {
-    };
+      workoutsCount: null
+    }
+  },
+  methods: {
+    startWorkout: function() {
+      this.addWorkout();
+      router.push({ path: "/countdown" });
+    }
   },
   components: {
     Btn
+  },
+  created() {
+    let that = this;
+    this.workoutsCountRef.child("counter").on("value", function(ss) {
+      that.workoutsCount = ss.val();
+    });
   }
 };
 </script>
