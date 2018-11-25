@@ -18,7 +18,8 @@ const workoutsCountRef = firebase.database().ref("workouts_count");
 Vue.mixin({
   data: function() {
     return {
-      workoutsCountRef: workoutsCountRef
+      workoutsCountRef: workoutsCountRef,
+      workoutsCount: 0
     }
   },
   methods: {

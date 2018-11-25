@@ -53,11 +53,6 @@ import Btn from '@/components/Btn';
 
 export default {
   name: "WelcomePage",
-  data() {
-    return {
-      workoutsCount: null
-    }
-  },
   methods: {
     startWorkout: function() {
       this.addWorkout();

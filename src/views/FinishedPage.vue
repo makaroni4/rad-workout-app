@@ -4,7 +4,7 @@
       <div class="row">
         <div class="col-xs-12">
           <div class="finished-page__header">
-            You’ve just completed 21928th RAD workout! 👏
+            You’ve just completed {{ workoutsCount }}th RAD workout! 👏
           </div>
 
           <div class="finished-page__description">
@@ -43,9 +43,11 @@ export default {
       this.currentNumber -= 1;
     }, 1000);
   },
-  watch: {
-  },
-  destroyed() {
+  created() {
+    let that = this;
+    this.workoutsCountRef.child("counter").on("value", function(ss) {
+      that.workoutsCount = ss.val();
+    });
   },
   components: {
     PaypalBtn
