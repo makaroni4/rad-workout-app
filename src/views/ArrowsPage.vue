@@ -44,7 +44,7 @@ export default {
       arrow: randomArrow(),
       paused: false,
       showArrow: false,
-      timer: 5
+      timer: 300
     };
   },
   methods: {
