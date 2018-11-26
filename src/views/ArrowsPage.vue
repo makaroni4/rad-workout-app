@@ -10,12 +10,6 @@
           {{ upcaseArrow }}
         </p>
       </transition>
-
-      <div class="arrows-page__finish-cta" v-if="paused">
-        <Btn text="Finish"
-             v-bind:modifiers="['small', 'pink']"
-             @click.native="finish" />
-      </div>
     </div>
 
     <div class="arrows-page__menu">
@@ -23,10 +17,18 @@
         {{ minuteTimer }}
       </div>
 
-      <div class="arrows-page__pause-cta">
-        <Btn v-bind:text="this.paused ? 'Resume' : 'Pause'"
-             v-bind:modifiers="['small', 'pink']"
-             @click.native="pause" />
+      <div class="arrows-page__menu-ctas">
+        <div class="arrows-page__finish-cta" v-if="paused">
+          <Btn text="Finish"
+              v-bind:modifiers="['small', 'pink']"
+              @click.native="finish" />
+        </div>
+
+        <div class="arrows-page__pause-cta">
+          <Btn v-bind:text="this.paused ? 'Resume' : 'Pause'"
+              v-bind:modifiers="['small', 'pink']"
+              @click.native="pause" />
+        </div>
       </div>
     </div>
   </div>
@@ -192,6 +194,7 @@ export default {
     right: 10px;
     display: flex;
     align-items: center;
+    justify-content: space-between;
   }
 
   &__timer {
@@ -202,14 +205,13 @@ export default {
     line-height: 20px;
   }
 
-  &__pause-cta {
+  &__menu-ctas {
+    display: flex;
     margin-left: 16px;
   }
 
   &__finish-cta {
-    position: absolute;
-    bottom: 10px;
-    right: 10px;
+    margin-right: 16px;
   }
 }
 </style>
