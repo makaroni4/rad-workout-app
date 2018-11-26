@@ -27,7 +27,9 @@
             </div>
 
             <div class="welcome-page__workouts-count" v-if="workoutsCount">
-              <strong>{{ workoutsCount }}</strong> workouts so far
+              <strong>
+                <AnimatedNumber :number="workoutsCount"></AnimatedNumber>
+              </strong> workouts so far
             </div>
           </div>
         </div>
@@ -49,7 +51,8 @@
 
 <script>
 import router from "@/router.js";
-import Btn from '@/components/Btn';
+import Btn from "@/components/Btn";
+import AnimatedNumber from "@/components/AnimatedNumber";
 
 export default {
   name: "WelcomePage",
@@ -60,7 +63,8 @@ export default {
     }
   },
   components: {
-    Btn
+    Btn,
+    AnimatedNumber
   },
   created() {
     let that = this;

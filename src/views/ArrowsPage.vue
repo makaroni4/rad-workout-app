@@ -28,7 +28,7 @@
 
 <script>
 import router from "@/router.js";
-import Btn from '@/components/Btn';
+import Btn from "@/components/Btn";
 
 const ARROWS = ["Right", "Down", "Left", "Up"];
 let interval;
@@ -44,7 +44,7 @@ export default {
       arrow: randomArrow(),
       paused: false,
       showArrow: false,
-      timer: 300
+      timer: 5
     };
   },
   methods: {

@@ -4,7 +4,7 @@
       <div class="row">
         <div class="col-xs-12">
           <div class="finished-page__header">
-            You’ve just completed {{ workoutsCount }}th RAD workout! 👏
+            You’ve just completed <span v-if="workoutsCount"><AnimatedNumber :number="workoutsCount"></AnimatedNumber>th</span> RAD workout! 👏
           </div>
 
           <div class="finished-page__description">
@@ -29,6 +29,7 @@
 <script>
 import router from "@/router.js";
 import PaypalBtn from "@/components/PaypalBtn";
+import AnimatedNumber from "@/components/AnimatedNumber";
 
 let interval;
 
@@ -50,7 +51,8 @@ export default {
     });
   },
   components: {
-    PaypalBtn
+    PaypalBtn,
+    AnimatedNumber
   }
 };
 </script>
