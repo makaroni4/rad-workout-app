@@ -1,5 +1,8 @@
 <template>
   <a class="paypal-btn" href="https://www.paypal.me/makaroni4">
+    <div class="paypal-btn__logo">
+    </div>
+
     Donate
   </a>
 </template>
@@ -18,7 +21,9 @@ export default {
 @import "../assets/css/global.scss";
 
 .paypal-btn {
-  display: inline-block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   min-width: 220px;
   height: 80px;
   padding: 22px 16px;
@@ -34,5 +39,13 @@ export default {
   font-size: 24px;
   line-height: 32px;
   text-align: center;
+
+  &__logo {
+    width: 33px;
+    height: 33px;
+    margin-right: 10px;
+
+    background-image: url("../assets/paypal.svg");
+  }
 }
 </style>

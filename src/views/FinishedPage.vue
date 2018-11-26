@@ -93,6 +93,7 @@ export default {
 
   &__donate-cta {
     margin-top: 60px;
+    max-width: 200px;
   }
 }
 </style>
