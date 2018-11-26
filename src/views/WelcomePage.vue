@@ -126,14 +126,20 @@ export default {
   &__cta {
     display: inline-block;
     margin-top: 60px;
+    position: relative;
+    padding-bottom: 24px;
   }
 
   &__workouts-count {
     margin-top: 4px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
 
     color: $white;
     font-family: "Open Sans", sans-serif;;
-    line-height: 27px;
+    line-height: 18px;
     font-size: 16px;
     text-align: center;
 
