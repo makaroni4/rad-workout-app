@@ -17,7 +17,7 @@
             </p>
 
             <p>
-              It’s free and open source.
+              It’s free and <a href="https://github.com/makaroni4/rad-workout-app">open source</a>.
             </p>
           </div>
 
@@ -37,6 +37,7 @@
         <div class="col-xs-12 col-sm-6">
           <div class="welcome-page__demo">
             <div class="welcome-page__demo-gif">
+              <iframe src="https://giphy.com/embed/dCACGk7Td4nk4jdTCY" width="100%" height="100%" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
             </div>
 
             <div class="welcome-page__video-reference">
@@ -118,9 +119,10 @@ export default {
   &__demo-gif {
     margin-top: 60px;
     width: 566px;
-    height: 300px;
+    height: 318px;
+    overflow: hidden;
 
-    background-image: url('../assets/intro_video.jpg')
+    border-radius: 4px;
   }
 
   &__cta {

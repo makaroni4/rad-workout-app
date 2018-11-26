@@ -34,7 +34,7 @@ export default {
   height: 80px;
   padding: 22px 16px;
 
-  border-radius: 40px;
+  border-radius: 2px;
 
   background-color: $red;
 
