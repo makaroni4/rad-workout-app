@@ -40,6 +40,10 @@ export default {
   line-height: 32px;
   text-align: center;
 
+  &:hover {
+    background-color: $darker-red;
+  }
+
   &__logo {
     width: 33px;
     height: 33px;
