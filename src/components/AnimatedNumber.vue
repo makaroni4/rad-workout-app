@@ -1,8 +1,14 @@
 <template>
-  <span>
+  <span class="animated-number">
     {{ displayNumber }}
   </span>
 </template>
+
+<style lang="scss">
+  .animated-number {
+    display: inline-block;
+  }
+</style>
 
 <script>
 export default {
