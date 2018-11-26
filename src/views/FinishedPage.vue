@@ -13,7 +13,7 @@
             </p>
 
             <p>
-              Hi 👋 My name is Anatoli, I’m a software engineer who likes to workout and build workout apps. If you like RAD workout – reward me with 1EUR, share feedback, request features or new apps. Have a great, RAD day!
+              Hi 👋 My name is Anatoli, I’m a software engineer from Berlin. If you like the workout – reward me with 1EUR, share feedback, request features or new apps. Have a great, RAD day!
             </p>
           </div>
 
@@ -23,6 +23,8 @@
         </div>
       </div>
     </div>
+
+    <Octocat />
   </div>
 </template>
 
@@ -30,6 +32,7 @@
 import router from "@/router.js";
 import PaypalBtn from "@/components/PaypalBtn";
 import AnimatedNumber from "@/components/AnimatedNumber";
+import Octocat from "@/components/Octocat";
 
 let interval;
 
@@ -52,7 +55,8 @@ export default {
   },
   components: {
     PaypalBtn,
-    AnimatedNumber
+    AnimatedNumber,
+    Octocat
   }
 };
 </script>

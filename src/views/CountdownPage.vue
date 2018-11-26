@@ -23,7 +23,7 @@ export default {
   mounted() {
     interval = setInterval(() => {
       this.currentNumber -= 1;
-    }, 1000);
+    }, 800);
   },
   watch: {
     currentNumber: function(value) {

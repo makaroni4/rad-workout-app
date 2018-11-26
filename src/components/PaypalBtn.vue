@@ -3,7 +3,7 @@
     <div class="paypal-btn__logo">
     </div>
 
-    Donate
+    Donate 0.99$
   </a>
 </template>
 
@@ -24,7 +24,7 @@ export default {
   display: flex;
   align-items: center;
   justify-content: center;
-  min-width: 220px;
+  min-width: 300px;
   height: 80px;
   padding: 22px 16px;
 

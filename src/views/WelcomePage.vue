@@ -47,6 +47,8 @@
         </div>
       </div>
     </div>
+
+    <Octocat />
   </div>
 </template>
 
@@ -54,6 +56,7 @@
 import router from "@/router.js";
 import Btn from "@/components/Btn";
 import AnimatedNumber from "@/components/AnimatedNumber";
+import Octocat from "@/components/Octocat";
 
 export default {
   name: "WelcomePage",
@@ -65,7 +68,8 @@ export default {
   },
   components: {
     Btn,
-    AnimatedNumber
+    AnimatedNumber,
+    Octocat
   },
   created() {
     let that = this;
