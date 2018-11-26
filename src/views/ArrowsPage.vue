@@ -10,6 +10,12 @@
           {{ upcaseArrow }}
         </p>
       </transition>
+
+      <div class="arrows-page__finish-cta" v-if="paused">
+        <Btn text="Finish"
+             v-bind:modifiers="['small', 'pink']"
+             @click.native="finish" />
+      </div>
     </div>
 
     <div class="arrows-page__menu">
@@ -17,7 +23,7 @@
         {{ minuteTimer }}
       </div>
 
-      <div class="arrows-page__pause">
+      <div class="arrows-page__pause-cta">
         <Btn v-bind:text="this.paused ? 'Resume' : 'Pause'"
              v-bind:modifiers="['small', 'pink']"
              @click.native="pause" />
@@ -48,6 +54,9 @@ export default {
     };
   },
   methods: {
+    finish() {
+      router.push({ path: "/finished" });
+    },
     pause() {
       this.paused = !this.paused;
 
@@ -168,17 +177,12 @@ export default {
     background-color: $light-blue;
   }
 
-  &__body {
-    width: 1000px;
-    margin: 0 auto;
-  }
-
   &__arrow {
     color: $white;
     font-family: "Poppins", sans-serif;
     font-weight: 600;
-    font-size: 240px;
-    line-height: 44px;
+    font-size: 45vh;
+    line-height: 45vh;
     text-align: center;
   }
 
@@ -198,8 +202,14 @@ export default {
     line-height: 20px;
   }
 
-  &__pause {
+  &__pause-cta {
     margin-left: 16px;
+  }
+
+  &__finish-cta {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
   }
 }
 </style>

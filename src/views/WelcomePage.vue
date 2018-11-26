@@ -13,7 +13,7 @@
         <div class="col-xs-12 col-sm-6">
           <div class="welcome-page__description">
             <p>
-              RAD is a fun agility drill you can do at home. Every couple of seconds you’ll see a new direction on the screen and perform a certain excercies: TOP – jump/squat up/jumping jack, BOTTOM – push up/squat, LEFT/RIGHT – jump to the side and touch the floor.
+              RAD is a fun agility drill you can do at home. Follow directions on the screen and do excercies like UP – jump/squat up/jumping jack, DOWN – push up/squat, LEFT/RIGHT – jump to the side and touch the floor.
             </p>
 
             <p>

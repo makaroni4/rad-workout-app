@@ -56,16 +56,12 @@ export default {
 
   background-color: $blue;
 
-  &__body {
-    width: 1000px;
-  }
-
   &__number {
     color: $white;
     font-family: "Poppins", sans-serif;
     font-weight: 600;
-    font-size: 240px;
-    line-height: 44px;
+    font-size: 45vh;
+    line-height: 45vh;
     text-align: center;
   }
 }
