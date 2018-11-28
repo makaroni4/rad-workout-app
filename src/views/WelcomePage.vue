@@ -59,7 +59,7 @@
     <div class="welcome-page__footer">
       <ul class="welcome-page__footer-links">
         <li>
-          Created by <a href="https://makaroni4.com" target="_blank">@makaroni4</a> with ♥️💪
+          Made by <a href="https://makaroni4.com" target="_blank">@makaroni4</a>
         </li>
       </ul>
 
