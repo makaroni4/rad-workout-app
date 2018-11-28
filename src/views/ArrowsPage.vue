@@ -18,16 +18,16 @@
       </div>
 
       <div class="arrows-page__menu-ctas">
-        <div class="arrows-page__finish-cta" v-if="paused">
-          <Btn text="Finish"
-              v-bind:modifiers="['small', 'pink']"
-              @click.native="finish" />
-        </div>
-
         <div class="arrows-page__pause-cta">
           <Btn v-bind:text="this.paused ? 'Resume' : 'Pause'"
               v-bind:modifiers="['small', 'pink']"
               @click.native="pause" />
+        </div>
+
+        <div class="arrows-page__finish-cta" v-if="paused">
+          <Btn text="Finish"
+              v-bind:modifiers="['small', 'pink']"
+              @click.native="finish" />
         </div>
       </div>
     </div>
@@ -193,11 +193,14 @@ export default {
     top: 10px;
     right: 10px;
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     justify-content: space-between;
   }
 
   &__timer {
+    margin-top: 5px;
+    margin-right: 16px;
+
     color: $white;
     font-family: "Poppins", sans-serif;
     font-weight: 600;
@@ -207,11 +210,11 @@ export default {
 
   &__menu-ctas {
     display: flex;
-    margin-left: 16px;
+    flex-direction: column;
   }
 
   &__finish-cta {
-    margin-right: 16px;
+    margin-top: 16px;
   }
 }
 </style>
