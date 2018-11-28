@@ -1,10 +1,20 @@
 <template>
   <div class="welcome-page">
+    <div class="welcome-page__logo-container">
+      <div class="row">
+        <div class="col-xs-12 col-sm-6">
+          <div class="welcome-page__logo">
+            RAD
+          </div>
+        </div>
+      </div>
+    </div>
+
     <div class="welcome-page__body">
       <div class="row">
         <div class="col-xs-12">
           <h1 class="welcome-page__header">
-            RAD – 5min Reactive Arrow Drill workout
+            Try out 3-minute Reactive Arrow Drill workout
           </h1>
         </div>
       </div>
@@ -96,11 +106,28 @@ export default {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
 
   background-color: $blue;
 
   &__body {
     width: 1000px;
+  }
+
+  &__logo-container {
+    width: 1000px;
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    margin-left: -500px;
+  }
+
+  &__logo {
+    color: $white;
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    line-height: 18px;
+    font-size: 18px;
   }
 
   &__header {

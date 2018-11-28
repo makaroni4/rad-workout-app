@@ -52,7 +52,7 @@ export default {
       arrow: randomArrow(),
       paused: false,
       showArrow: false,
-      timer: 300
+      timer: 180
     };
   },
   methods: {
