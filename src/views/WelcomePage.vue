@@ -4,7 +4,7 @@
       <div class="row">
         <div class="col-xs-12 col-sm-6">
           <div class="welcome-page__logo">
-            RAD
+            RAD workout
           </div>
         </div>
       </div>
@@ -23,7 +23,7 @@
         <div class="col-xs-12 col-sm-6">
           <div class="welcome-page__description">
             <p>
-              RAD is a fun agility drill you can do at home. Follow directions on the screen and do excercies like UP – jump/squat up/jumping jack, DOWN – push up/squat, LEFT/RIGHT – jump to the side and touch the floor.
+              RAD is a fun agility drill you can do at home. Follow directions on the screen and do excercies like UP – jump/squat up/jumping jack, DOWN – push up/squat, LEFT/RIGHT – jump to the side and touch the floor. Most important: improvise & have fun!
             </p>
 
             <p>
@@ -44,18 +44,30 @@
           </div>
         </div>
 
-        <div class="col-xs-12 col-sm-6">
-          <div class="welcome-page__demo">
-            <div class="welcome-page__demo-gif">
-              <iframe src="https://giphy.com/embed/dCACGk7Td4nk4jdTCY" width="100%" height="100%" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
-            </div>
+        <div class="col-xs-12 col-sm-6 col-full-width">
+          <div class="welcome-page__demo-gif">
+            <iframe src="https://giphy.com/embed/dCACGk7Td4nk4jdTCY" width="100%" height="100%" style="position:absolute" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
+          </div>
 
-            <div class="welcome-page__video-reference">
-              RAD workout app was inspired by <a href="https://youtu.be/7eyNh8_MGF4?t=537" target="_blank">this Youtube video</a>.
-            </div>
+          <div class="welcome-page__video-reference">
+            RAD workout app was inspired by <a href="https://youtu.be/7eyNh8_MGF4?t=537" target="_blank">this Youtube video</a>.
           </div>
         </div>
       </div>
+    </div>
+
+    <div class="welcome-page__footer">
+      <ul class="welcome-page__footer-links">
+        <li>
+          Created by <a href="https://makaroni4.com" target="_blank">@makaroni4</a> with ♥️💪
+        </li>
+      </ul>
+
+      <ul class="welcome-page__footer-links">
+        <li>
+          <a href="#">Privacy policy</a>
+        </li>
+      </ul>
     </div>
 
     <Octocat />
@@ -149,8 +161,9 @@ export default {
 
   &__demo-gif {
     margin-top: 60px;
-    width: 566px;
-    height: 318px;
+    width: 100%;
+    padding-bottom: 56%; // responsive embed from Giphy
+    position:relative;
     overflow: hidden;
 
     border-radius: 4px;
@@ -158,7 +171,7 @@ export default {
 
   &__cta {
     display: inline-block;
-    margin-top: 60px;
+    margin-top: 50px;
     position: relative;
     padding-bottom: 24px;
   }
@@ -188,6 +201,27 @@ export default {
     font-family: "Open Sans", sans-serif;;
     font-size: 12px;
     line-height: 16px;
+  }
+
+  &__footer {
+    width: 1000px;
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    margin-left: -500px;
+    padding-right: 0.5rem;
+    padding-left: 0.5rem;
+    display: flex;
+    justify-content: space-between;
+
+    color: $white;
+    font-family: "Open Sans", sans-serif;;
+    font-size: 12px;
+    line-height: 16px;
+  }
+
+  &__footer-links {
+    display: inline-block;
   }
 }
 </style>
