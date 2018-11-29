@@ -14,7 +14,7 @@
       <div class="row">
         <div class="col-xs-12">
           <h1 class="welcome-page__header">
-            Try out 3-minute Reactive Arrow Drill workout
+            Try out 3 minute Reactive Arrow Drill workout
           </h1>
         </div>
       </div>
@@ -103,10 +103,6 @@ export default {
 </script>
 
 <style lang="scss">
-@import url('https://fonts.googleapis.com/css?family=Open+Sans|Poppins:600');
-@import "../assets/css/reset.css";
-@import "../assets/css/grid.scss";
-@import "../assets/css/variables.scss";
 @import "../assets/css/global.scss";
 
 .welcome-page {
@@ -122,16 +118,30 @@ export default {
 
   background-color: $blue;
 
+  @include on_mobile {
+    position: relative;
+    padding: 20px 0;
+  }
+
   &__body {
-    width: 1000px;
+    @include container;
   }
 
   &__logo-container {
-    width: 1000px;
+    @include container;
+
     position: absolute;
     top: 20px;
     left: 50%;
-    margin-left: -500px;
+    margin-left: -30rem;
+
+    @include on_mobile {
+      width: 100%;
+      position: relative;
+      top: auto;
+      left: auto;
+      margin-left: 0;
+    }
   }
 
   &__logo {
@@ -148,6 +158,10 @@ export default {
     font-weight: 600;
     line-height: 44px;
     font-size: 36px;
+
+    @include on_mobile {
+      margin-top: 20px;
+    }
   }
 
   &__description {
@@ -157,6 +171,10 @@ export default {
     font-family: "Open Sans", sans-serif;;
     line-height: 27px;
     font-size: 16px;
+
+    @include on_mobile {
+      margin-top: 40px;
+    }
   }
 
   &__demo-gif {
@@ -167,6 +185,10 @@ export default {
     overflow: hidden;
 
     border-radius: 4px;
+
+    @include on_mobile {
+      margin-top: 50px;
+    }
   }
 
   &__cta {
@@ -174,6 +196,13 @@ export default {
     margin-top: 50px;
     position: relative;
     padding-bottom: 24px;
+
+    @include on_mobile {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 30px;
+    }
   }
 
   &__workouts-count {
@@ -204,13 +233,13 @@ export default {
   }
 
   &__footer {
-    width: 1000px;
+    @include container;
+
     position: absolute;
     bottom: 20px;
     left: 50%;
-    margin-left: -500px;
-    padding-right: 0.5rem;
-    padding-left: 0.5rem;
+    margin-left: -30rem;
+    padding: 0 0.5rem;
     display: flex;
     justify-content: space-between;
 
@@ -218,6 +247,15 @@ export default {
     font-family: "Open Sans", sans-serif;;
     font-size: 12px;
     line-height: 16px;
+
+    @include on_mobile {
+      position: relative;
+      bottom: auto;
+      left: auto;
+      margin-left: 0;
+      margin-top: 50px;
+      padding: 0 1rem;
+    }
   }
 
   &__footer-links {

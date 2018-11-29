@@ -60,8 +60,8 @@ export default {
     color: $white;
     font-family: "Poppins", sans-serif;
     font-weight: 600;
-    font-size: 45vh;
-    line-height: 45vh;
+    font-size: 20vw;
+    line-height: 20vw;
     text-align: center;
   }
 }

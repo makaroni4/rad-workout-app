@@ -1,17 +1,12 @@
 .row {
   display: flex;
+  flex-wrap: wrap;
 }
 
 .col-xs-12 {
   max-width: 100%;
-  padding-right: 0.5rem;
-  padding-left: 0.5rem;
-}
-
-.col-sm-6 {
-  max-width: 50%;
-  padding-right: 0.5rem;
-  padding-left: 0.5rem;
+  padding-right: 1rem;
+  padding-left: 1rem;
 }
 
 .col-full-width {
@@ -20,4 +15,18 @@
 
 .flex-end {
   justify-content: space-between;
+}
+
+@media only screen and (min-width: 48rem) {
+  .col-xs-12 {
+    padding-right: 0.5rem;
+    padding-left: 0.5rem;
+  }
+
+  .col-sm-6 {
+    max-width: 50%;
+    flex-basis: 50%;
+    padding-right: 0.5rem;
+    padding-left: 0.5rem;
+  }
 }

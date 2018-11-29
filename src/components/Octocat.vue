@@ -21,9 +21,9 @@
   animation: octocat-wave 560ms ease-in-out;
 }
 
-@media (max-width:500px) {
-  .github-corner:hover .octo-arm{
-    animation:none;
+@media only screen and (max-width: 48rem) {
+  .github-corner {
+    display: none;
   }
 
   .github-corner .octo-arm {

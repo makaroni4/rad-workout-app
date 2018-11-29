@@ -1,0 +1,14 @@
+@mixin container {
+  width: 100%;
+  margin: 0 auto;
+
+  @media only screen and (min-width: 48em) {
+    width: 60rem;
+  }
+}
+
+@mixin on_mobile {
+  @media only screen and (max-width: 48rem) {
+    @content;
+  }
+}

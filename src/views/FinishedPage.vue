@@ -77,7 +77,7 @@ export default {
   background-color: $blue;
 
   &__body {
-    width: 1000px;
+    @include container;
   }
 
   &__header {
@@ -95,11 +95,19 @@ export default {
     font-family: "Open Sans", sans-serif;;
     line-height: 27px;
     font-size: 16px;
+
+    @include on_mobile {
+      margin-top: 30px;
+    }
   }
 
   &__donate-cta {
     margin-top: 60px;
     max-width: 200px;
+
+    @include on_mobile {
+      margin-top: 30px;
+    }
   }
 
   &__workouts-count {

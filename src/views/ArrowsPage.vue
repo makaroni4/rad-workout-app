@@ -1,16 +1,14 @@
 <template>
   <div v-bind:class="pageCssClass">
-    <div class="arrows-page__body">
-      <transition
-        name="custom-classes-transition"
-        v-bind:enter-active-class="fadeInCssClass"
-        v-bind:leave-active-class="fadeOutCssClass"
-      >
-        <p class="arrows-page__arrow" v-if="showArrow || paused">
-          {{ upcaseArrow }}
-        </p>
-      </transition>
-    </div>
+    <transition
+      name="custom-classes-transition"
+      v-bind:enter-active-class="fadeInCssClass"
+      v-bind:leave-active-class="fadeOutCssClass"
+    >
+      <div class="arrows-page__arrow" v-if="showArrow || paused">
+        {{ upcaseArrow }}
+      </div>
+    </transition>
 
     <div class="arrows-page__menu">
       <div class="arrows-page__timer">
@@ -160,7 +158,6 @@ export default {
 
 <style lang="scss">
 @import "../assets/css/global.scss";
-@import "../assets/css/animate.scss";
 
 .arrows-page {
   position: absolute;
@@ -183,8 +180,8 @@ export default {
     color: $white;
     font-family: "Poppins", sans-serif;
     font-weight: 600;
-    font-size: 45vh;
-    line-height: 45vh;
+    font-size: 20vw;
+    line-height: 20vw;
     text-align: center;
   }
 
