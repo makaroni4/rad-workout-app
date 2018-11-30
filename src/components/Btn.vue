@@ -58,6 +58,14 @@ export default {
     }
   }
 
+  &--blue {
+    background-color: $lightest-blue;
+
+    &:hover {
+      background-color: $lighter-blue;
+    }
+  }
+
   &--small {
     min-width: 80px;
     height: auto;

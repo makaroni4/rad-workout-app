@@ -24,7 +24,7 @@
 
         <div class="arrows-page__finish-cta" v-if="paused">
           <Btn text="Finish"
-              v-bind:modifiers="['small', 'pink']"
+              v-bind:modifiers="['small', 'blue']"
               @click.native="finish" />
         </div>
       </div>
