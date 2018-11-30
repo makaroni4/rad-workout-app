@@ -33,8 +33,9 @@ Vue.mixin({
       });
     },
     trackEvent: function(eventName) {
-      dataLayer.push({
-        event: eventName
+      gtag("event", eventName, {
+        "event_category": "click",
+        "send_to": "UA-129975491-1"
       });
     }
   }

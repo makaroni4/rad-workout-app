@@ -39,9 +39,9 @@ const router = new Router({
 });
 
 router.afterEach((to, from) => {
-  dataLayer.push({
-    event: "pageview",
-    url: to.path
+  gtag("event", "page_view", {
+    "send_to": "UA-129975491-1",
+    "page_path": to.path
   });
 });
 
