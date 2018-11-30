@@ -3,7 +3,9 @@
     <div class="paypal-btn__logo">
     </div>
 
-    Donate 0.99$
+    <div class="paypal-btn__copy">
+      Donate 0.99$
+    </div>
   </a>
 </template>
 
@@ -39,6 +41,12 @@ export default {
   font-size: 24px;
   line-height: 32px;
   text-align: center;
+
+  @include on_mobile {
+    width: 100%;
+    max-width: auto;
+    min-width: auto;
+  }
 
   &:hover {
     background-color: $darker-red;

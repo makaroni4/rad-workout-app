@@ -1,9 +1,9 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans|Poppins:600');
-@import "../assets/css/reset.css";
-@import "../assets/css/grid.scss";
-@import "../assets/css/variables.scss";
-@import "../assets/css/mixins.scss";
-@import "../assets/css/animate.scss";
+@import "reset.scss";
+@import "grid.scss";
+@import "variables.scss";
+@import "mixins.scss";
+@import "animate.scss";
 
 p + p {
 	margin-top: 24px;

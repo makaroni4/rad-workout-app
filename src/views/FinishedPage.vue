@@ -1,24 +1,26 @@
 <template>
   <div class="finished-page">
-    <div class="finished-page__body">
-      <div class="row">
-        <div class="col-xs-12">
-          <div class="finished-page__header">
-            Hurrah, you’ve just completed <span class="finished-page__workouts-count" v-if="workoutsCount"><AnimatedNumber :number="workoutsCount"></AnimatedNumber>th</span> RAD workout! 👏
-          </div>
+    <div class="finished-page__container">
+      <div class="finished-page__body">
+        <div class="row">
+          <div class="col-xs-12">
+            <div class="finished-page__header">
+              Hurrah, you’ve just completed <span class="finished-page__workouts-count" v-if="workoutsCount"><AnimatedNumber :number="workoutsCount"></AnimatedNumber>th</span> RAD workout! 👏
+            </div>
 
-          <div class="finished-page__description">
-            <p>
-              Message from the creator:
-            </p>
+            <div class="finished-page__description">
+              <p>
+                Message from the creator:
+              </p>
 
-            <p>
-              Hi 👋 My name is Anatoli, I’m a software engineer from Berlin. If you like the workout – reward me with 0.99$, share feedback, request features or new apps. Have a great, RAD day!
-            </p>
-          </div>
+              <p>
+                Hi 👋 My name is Anatoli, I’m a software engineer from Berlin. If you like the workout – reward me with 0.99$, share feedback, request features or new apps. Have a great, RAD day!
+              </p>
+            </div>
 
-          <div class="finished-page__donate-cta">
-            <PaypalBtn />
+            <div class="finished-page__donate-cta">
+              <PaypalBtn />
+            </div>
           </div>
         </div>
       </div>
@@ -65,20 +67,20 @@ export default {
 @import "../assets/css/global.scss";
 
 .finished-page {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
 
   background-color: $blue;
 
-  @include on_mobile {
-    position: relative;
-    padding: 20px 0;
+  &__container {
+    padding: 100px 0 20px;
+
+    background-color: $blue;
+
+    @include on_mobile {
+      padding: 20px 0;
+    }
   }
 
   &__body {
@@ -112,6 +114,7 @@ export default {
 
     @include on_mobile {
       margin-top: 30px;
+      max-width: 100%;
     }
   }
 
