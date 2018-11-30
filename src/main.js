@@ -31,6 +31,11 @@ Vue.mixin({
           console.log("--> Error when incrementing the counter " + err);
         }
       });
+    },
+    trackEvent: function(eventName) {
+      dataLayer.push({
+        event: eventName
+      });
     }
   }
 });

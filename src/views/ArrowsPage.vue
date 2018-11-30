@@ -55,17 +55,22 @@ export default {
   },
   methods: {
     finish() {
+      this.trackEvent("finished");
       router.push({ path: "/finished" });
     },
     pause() {
       this.paused = !this.paused;
 
       if(this.paused) {
+        this.trackEvent("paused");
+
         clearInterval(interval);
         clearInterval(timerInterval);
 
         this.arrow = "PAUSED";
       } else {
+        this.trackEvent("unpaused");
+
         this.showArrow = false;
 
         interval = setInterval(() => {

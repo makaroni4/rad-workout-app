@@ -8,7 +8,7 @@ import PrivacyPage from './views/PrivacyPage';
 
 Vue.use(Router);
 
-export default new Router({
+const router = new Router({
   routes: [
     {
       path: '/',
@@ -35,5 +35,14 @@ export default new Router({
       name: 'PrivacyPage',
       component: PrivacyPage
     },
-  ],
+  ]
 });
+
+router.afterEach((to, from) => {
+  dataLayer.push({
+    event: "pageview",
+    url: to.path
+  });
+});
+
+export default router;
