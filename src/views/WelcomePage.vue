@@ -65,7 +65,9 @@
 
       <ul class="welcome-page__footer-links">
         <li>
-          <a href="#">Privacy policy</a>
+          <router-link to="/privacy">
+            <a href="#">Privacy policy</a>
+          </router-link>
         </li>
       </ul>
     </div>

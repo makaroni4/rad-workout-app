@@ -4,6 +4,7 @@ import WelcomePage from './views/WelcomePage';
 import CountdownPage from './views/CountdownPage';
 import ArrowsPage from './views/ArrowsPage';
 import FinishedPage from './views/FinishedPage';
+import PrivacyPage from './views/PrivacyPage';
 
 Vue.use(Router);
 
@@ -28,6 +29,11 @@ export default new Router({
       path: '/finished',
       name: 'FinishedPage',
       component: FinishedPage
+    },
+    {
+      path: '/privacy',
+      name: 'PrivacyPage',
+      component: PrivacyPage
     },
   ],
 });
