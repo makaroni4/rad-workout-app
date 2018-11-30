@@ -76,6 +76,11 @@ export default {
 
   background-color: $blue;
 
+  @include on_mobile {
+    position: relative;
+    padding: 20px 0;
+  }
+
   &__body {
     @include container;
   }
