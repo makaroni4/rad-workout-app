@@ -12,22 +12,22 @@
 
 <script>
 export default {
-  name: "AnimatedNumber",
+  name: 'AnimatedNumber',
   props: {
-    number: Number
+    number: Number,
   },
   data() {
-  	return {
+    return {
       displayNumber: 0,
-      interval: false
-    }
+      interval: false,
+    };
   },
-  mounted: function() {
+  mounted() {
     const TOTAL_DURATION = 500;
 
-    this.interval = window.setInterval(function() {
-      if(this.displayNumber < this.number) {
-        var change = (this.number - this.displayNumber) / 10;
+    this.interval = window.setInterval(() => {
+      if (this.displayNumber < this.number) {
+        let change = (this.number - this.displayNumber) / 10;
 
         change = change >= 0 ? Math.ceil(change) : Math.floor(change);
 
@@ -35,7 +35,7 @@ export default {
       } else {
         clearInterval(this.interval);
       }
-    }.bind(this), TOTAL_DURATION / this.number);
-  }
-}
+    }, TOTAL_DURATION / this.number);
+  },
+};
 </script>

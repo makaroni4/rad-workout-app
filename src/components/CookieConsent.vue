@@ -8,6 +8,7 @@
         </div>
 
         <div class="cookie-consent__description">
+          <!-- eslint-disable-next-line vue/max-len -->
           Cookies are used to check how many people visit this page and make workouts. You consent to cookies if you continue to use this website.
         </div>
 
@@ -79,33 +80,33 @@
 </style>
 
 <script>
-import Btn from "@/components/Btn";
+import Btn from '@/components/Btn.vue';
 
 export default {
-  name: "CookieConsent",
+  name: 'CookieConsent',
   data() {
     return {
-      showConsent: false
+      showConsent: false,
     };
   },
-  mounted: function() {
-    let that = this;
-    setTimeout(function() {
-      that.showConsent = !this.$cookies.isKey("rad_app_consent");
+  mounted() {
+    const that = this;
+    setTimeout(function () {
+      that.showConsent = !this.$cookies.isKey('rad_app_consent');
     }, 2000);
   },
   methods: {
-    accept: function() {
-      this.$cookies.set("rad_app_consent", true, "1y");
+    accept() {
+      this.$cookies.set('rad_app_consent', true, '1y');
       this.showConsent = false;
     },
-    decline: function() {
-      this.$cookies.set("rad_app_consent", false, "1y");
+    decline() {
+      this.$cookies.set('rad_app_consent', false, '1y');
       this.showConsent = false;
-    }
+    },
   },
   components: {
-    Btn
-  }
-}
+    Btn,
+  },
+};
 </script>

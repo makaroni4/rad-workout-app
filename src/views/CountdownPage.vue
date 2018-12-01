@@ -9,15 +9,15 @@
 </template>
 
 <script>
-import router from "@/router.js";
+import router from '@/router.js';
 
 let interval;
 
 export default {
-  name: "CountdownPage",
+  name: 'CountdownPage',
   data() {
     return {
-      currentNumber: 3
+      currentNumber: 3,
     };
   },
   mounted() {
@@ -26,14 +26,14 @@ export default {
     }, 800);
   },
   watch: {
-    currentNumber: function(value) {
-      if(value == 0) {
+    currentNumber(value) {
+      if (value == 0) {
         this.currentNumber = 3;
         clearInterval(interval);
 
-        router.push({ path: "/arrows" })
+        router.push({ path: '/arrows' });
       }
-    }
+    },
   },
   destroyed() {
     clearInterval(interval);

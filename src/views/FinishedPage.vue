@@ -31,15 +31,15 @@
 </template>
 
 <script>
-import router from "@/router.js";
-import PaypalBtn from "@/components/PaypalBtn";
-import AnimatedNumber from "@/components/AnimatedNumber";
-import Octocat from "@/components/Octocat";
+import router from '@/router.js';
+import PaypalBtn from '@/components/PaypalBtn.vue';
+import AnimatedNumber from '@/components/AnimatedNumber.vue';
+import Octocat from '@/components/Octocat.vue';
 
 let interval;
 
 export default {
-  name: "FinishedPage",
+  name: 'FinishedPage',
   data() {
     return {
     };
@@ -50,16 +50,16 @@ export default {
     }, 1000);
   },
   created() {
-    let that = this;
-    this.workoutsCountRef.child("counter").on("value", function(ss) {
+    const that = this;
+    this.workoutsCountRef.child('counter').on('value', (ss) => {
       that.workoutsCount = ss.val();
     });
   },
   components: {
     PaypalBtn,
     AnimatedNumber,
-    Octocat
-  }
+    Octocat,
+  },
 };
 </script>
 

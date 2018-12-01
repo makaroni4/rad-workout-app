@@ -11,12 +11,12 @@
 
 <script>
 export default {
-  name: "PaypalBtn",
+  name: 'PaypalBtn',
   data() {
     return {
-    }
-  }
-}
+    };
+  },
+};
 </script>
 
 <style lang="scss">

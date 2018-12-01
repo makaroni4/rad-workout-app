@@ -79,35 +79,35 @@
 
 <script>
 import router from "@/router.js";
-import Btn from "@/components/Btn";
-import AnimatedNumber from "@/components/AnimatedNumber";
-import Octocat from "@/components/Octocat";
-import CookieConsent from "@/components/CookieConsent";
+import Btn from "@/components/Btn.vue";
+import AnimatedNumber from "@/components/AnimatedNumber.vue";
+import Octocat from "@/components/Octocat.vue";
+import CookieConsent from "@/components/CookieConsent.vue";
 
 export default {
-  name: "WelcomePage",
+  name: 'WelcomePage',
   methods: {
-    startWorkout: function() {
-      if(!this.$cookies.isKey("rad_app_consent")) {
-        this.$cookies.set("rad_app_consent", true, "1y");
+    startWorkout() {
+      if (!this.$cookies.isKey('rad_app_consent')) {
+        this.$cookies.set('rad_app_consent', true, '1y');
       }
 
       this.addWorkout();
-      router.push({ path: "/countdown" });
-    }
+      router.push({ path: '/countdown' });
+    },
   },
   components: {
     Btn,
     AnimatedNumber,
     Octocat,
-    CookieConsent
+    CookieConsent,
   },
   created() {
-    let that = this;
-    this.workoutsCountRef.child("counter").on("value", function(ss) {
+    const that = this;
+    this.workoutsCountRef.child('counter').on('value', (ss) => {
       that.workoutsCount = ss.val();
     });
-  }
+  },
 };
 </script>
 

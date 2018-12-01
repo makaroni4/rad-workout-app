@@ -32,43 +32,41 @@
 </template>
 
 <script>
-import router from "@/router.js";
-import Btn from "@/components/Btn";
+import router from '@/router.js';
+import Btn from '@/components/Btn.vue';
 
-const ARROWS = ["Right", "Down", "Left", "Up"];
+const ARROWS = ['Right', 'Down', 'Left', 'Up'];
 let interval;
 let timerInterval;
-let randomArrow = () => {
-  return ARROWS[Math.floor(Math.random() * ARROWS.length)];
-}
+const randomArrow = () => ARROWS[Math.floor(Math.random() * ARROWS.length)];
 
 export default {
-  name: "ArrowsPage",
+  name: 'ArrowsPage',
   data() {
     return {
       arrow: randomArrow(),
       paused: false,
       showArrow: false,
-      timer: 180
+      timer: 180,
     };
   },
   methods: {
     finish() {
-      this.trackEvent("finished");
-      router.push({ path: "/finished" });
+      this.trackEvent('finished');
+      router.push({ path: '/finished' });
     },
     pause() {
       this.paused = !this.paused;
 
-      if(this.paused) {
-        this.trackEvent("paused");
+      if (this.paused) {
+        this.trackEvent('paused');
 
         clearInterval(interval);
         clearInterval(timerInterval);
 
-        this.arrow = "PAUSED";
+        this.arrow = 'PAUSED';
       } else {
-        this.trackEvent("unpaused");
+        this.trackEvent('unpaused');
 
         this.showArrow = false;
 
@@ -77,7 +75,7 @@ export default {
           this.showArrow = true;
 
           setTimeout(() => {
-            if(!this.paused) {
+            if (!this.paused) {
               this.showArrow = false;
             }
           }, 3500);
@@ -87,41 +85,41 @@ export default {
           this.timer -= 1;
         }, 1000);
       }
-    }
+    },
   },
   computed: {
-    minuteTimer: function() {
-      let minutes = Math.floor(this.timer / 60);
-      let seconds = this.timer - minutes * 60;
-      let paddedSeconds = seconds < 10 ? `0${seconds}` : seconds;
+    minuteTimer() {
+      const minutes = Math.floor(this.timer / 60);
+      const seconds = this.timer - minutes * 60;
+      const paddedSeconds = seconds < 10 ? `0${seconds}` : seconds;
 
       return `${minutes}:${paddedSeconds}`;
     },
-    upcaseArrow: function() {
+    upcaseArrow() {
       return this.arrow.toUpperCase();
     },
-    fadeInCssClass: function() {
-      let fadeInDirection = ((arrow) => {
+    fadeInCssClass() {
+      const fadeInDirection = ((arrow) => {
         switch (arrow) {
-          case "Up":
-            return "Up";
-          case "Down":
-            return "Down";
-          case "Right":
-            return "Left";
-          case "Left":
-            return "Right";
+          case 'Up':
+            return 'Up';
+          case 'Down':
+            return 'Down';
+          case 'Right':
+            return 'Left';
+          case 'Left':
+            return 'Right';
         }
       })(this.arrow);
 
-      return this.paused ? "" : `animated fadeIn${fadeInDirection}Big`;
+      return this.paused ? '' : `animated fadeIn${fadeInDirection}Big`;
     },
-    fadeOutCssClass: function() {
-      return this.paused ? "" : `animated fadeOut${this.arrow}Big`;
+    fadeOutCssClass() {
+      return this.paused ? '' : `animated fadeOut${this.arrow}Big`;
     },
-    pageCssClass: function() {
-      return this.paused ? "arrows-page arrows-page--paused" : "arrows-page";
-    }
+    pageCssClass() {
+      return this.paused ? 'arrows-page arrows-page--paused' : 'arrows-page';
+    },
   },
   mounted() {
     this.showArrow = true;
@@ -133,7 +131,7 @@ export default {
       this.showArrow = true;
 
       setTimeout(() => {
-        if(!this.paused) {
+        if (!this.paused) {
           this.showArrow = false;
         }
       }, 3500);
@@ -144,19 +142,19 @@ export default {
     }, 1000);
   },
   watch: {
-    timer: function(value) {
-      if(value === 0) {
-        router.push({ path: "/finished" })
+    timer(value) {
+      if (value === 0) {
+        router.push({ path: '/finished' });
       }
-    }
+    },
   },
   destroyed() {
     clearInterval(interval);
     clearInterval(timerInterval);
   },
   components: {
-    Btn
-  }
+    Btn,
+  },
 };
 </script>
 

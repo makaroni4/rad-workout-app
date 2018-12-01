@@ -93,23 +93,22 @@
 </style>
 
 <script>
-import router from "@/router.js";
-import Btn from "@/components/Btn";
+import router from '@/router.js';
+import Btn from '@/components/Btn.vue';
 
 export default {
-  name: "PrivacyPage",
+  name: 'PrivacyPage',
   data() {
     return {
     };
   },
   methods: {
-    back: function() {
-      router.push({ path: "/" });
-    }
+    back() {
+      router.push({ path: '/' });
+    },
   },
   components: {
-    Btn
-  }
-}
+    Btn,
+  },
+};
 </script>
-

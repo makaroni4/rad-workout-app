@@ -6,24 +6,22 @@
 
 <script>
 export default {
-  name: "Btn",
+  name: 'Btn',
   props: [
-    "text",
-    "modifiers",
-    "extraCssClass"
+    'text',
+    'modifiers',
+    'extraCssClass',
   ],
   data() {
     return {
-    }
+    };
   },
   computed: {
-    cssClass: function() {
-      return "btn " + (this.modifiers || []).map((m) => {
-        return "btn--" + m;
-      }).join(" ") + " " + this.extraCssClass;
-    }
+    cssClass() {
+      return `btn ${(this.modifiers || []).map(m => `btn--${m}`).join(' ')} ${this.extraCssClass}`;
+    },
   },
-}
+};
 </script>
 
 <style lang="scss">
