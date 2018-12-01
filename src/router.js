@@ -40,7 +40,7 @@ const router = new Router({
   ],
 });
 
-router.afterEach((to, from) => {
+router.afterEach((to) => {
   if ($cookies.get('rad_app_consent') === 'true') {
     gtag('event', 'page_view', {
       send_to: 'UA-129975491-1',

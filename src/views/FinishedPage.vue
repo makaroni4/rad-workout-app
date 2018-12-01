@@ -31,23 +31,15 @@
 </template>
 
 <script>
-import router from '@/router.js';
 import PaypalBtn from '@/components/PaypalBtn.vue';
 import AnimatedNumber from '@/components/AnimatedNumber.vue';
 import Octocat from '@/components/Octocat.vue';
-
-let interval;
 
 export default {
   name: 'FinishedPage',
   data() {
     return {
     };
-  },
-  mounted() {
-    interval = setInterval(() => {
-      this.currentNumber -= 1;
-    }, 1000);
   },
   created() {
     const that = this;

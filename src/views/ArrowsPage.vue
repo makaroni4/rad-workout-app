@@ -32,7 +32,7 @@
 </template>
 
 <script>
-import router from '@/router.js';
+import router from '@/router';
 import Btn from '@/components/Btn.vue';
 
 const ARROWS = ['Right', 'Down', 'Left', 'Up'];
@@ -124,7 +124,9 @@ export default {
   mounted() {
     this.showArrow = true;
 
-    setTimeout(() => this.showArrow = false, 3500);
+    setTimeout(() => {
+      this.showArrow = false;
+    }, 3500);
 
     interval = setInterval(() => {
       this.arrow = randomArrow();

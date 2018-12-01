@@ -93,7 +93,7 @@
 </style>
 
 <script>
-import router from '@/router.js';
+import router from '@/router';
 import Btn from '@/components/Btn.vue';
 
 export default {

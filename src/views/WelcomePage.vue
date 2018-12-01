@@ -78,11 +78,11 @@
 </template>
 
 <script>
-import router from "@/router.js";
-import Btn from "@/components/Btn.vue";
-import AnimatedNumber from "@/components/AnimatedNumber.vue";
-import Octocat from "@/components/Octocat.vue";
-import CookieConsent from "@/components/CookieConsent.vue";
+import router from '@/router';
+import Btn from '@/components/Btn.vue';
+import AnimatedNumber from '@/components/AnimatedNumber.vue';
+import Octocat from '@/components/Octocat.vue';
+import CookieConsent from '@/components/CookieConsent.vue';
 
 export default {
   name: 'WelcomePage',

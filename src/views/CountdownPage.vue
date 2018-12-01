@@ -9,7 +9,7 @@
 </template>
 
 <script>
-import router from '@/router.js';
+import router from '@/router';
 
 let interval;
 
@@ -27,7 +27,7 @@ export default {
   },
   watch: {
     currentNumber(value) {
-      if (value == 0) {
+      if (value === 0) {
         this.currentNumber = 3;
         clearInterval(interval);
 

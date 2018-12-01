@@ -91,7 +91,7 @@ export default {
   },
   mounted() {
     const that = this;
-    setTimeout(function () {
+    setTimeout(() => {
       that.showConsent = !this.$cookies.isKey('rad_app_consent');
     }, 2000);
   },
