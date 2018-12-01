@@ -101,14 +101,12 @@ export default {
     fadeInCssClass() {
       const fadeInDirection = ((arrow) => {
         switch (arrow) {
-          case 'Up':
-            return 'Up';
-          case 'Down':
-            return 'Down';
           case 'Right':
             return 'Left';
           case 'Left':
             return 'Right';
+          default:
+            return arrow;
         }
       })(this.arrow);
 

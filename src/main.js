@@ -6,6 +6,7 @@ Vue.use(require('vue-cookies'));
 
 Vue.config.productionTip = false;
 
+// eslint-disable-next-line no-undef
 firebase.initializeApp({
   apiKey: 'AIzaSyAwSWgEsGezR5MA3hUcPDhhQR8rlkRvCrg',
   authDomain: 'rad-workout-app.firebaseapp.com',
@@ -15,6 +16,7 @@ firebase.initializeApp({
   messagingSenderId: '20690506969',
 });
 
+// eslint-disable-next-line no-undef
 const workoutsCountRef = firebase.database().ref('workouts_count');
 
 Vue.mixin({
@@ -34,6 +36,7 @@ Vue.mixin({
     },
     trackEvent(eventName) {
       if (this.$cookies.get('rad_app_consent') === 'true') {
+        // eslint-disable-next-line no-undef
         gtag('event', eventName, {
           event_category: 'click',
           send_to: 'UA-129975491-1',
