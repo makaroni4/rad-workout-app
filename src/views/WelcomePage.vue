@@ -73,6 +73,7 @@
     </div>
 
     <Octocat />
+    <CookieConsent />
   </div>
 </template>
 
@@ -81,11 +82,16 @@ import router from "@/router.js";
 import Btn from "@/components/Btn";
 import AnimatedNumber from "@/components/AnimatedNumber";
 import Octocat from "@/components/Octocat";
+import CookieConsent from "@/components/CookieConsent";
 
 export default {
   name: "WelcomePage",
   methods: {
     startWorkout: function() {
+      if(!this.$cookies.isKey("rad_app_consent")) {
+        this.$cookies.set("rad_app_consent", true, "1y");
+      }
+
       this.addWorkout();
       router.push({ path: "/countdown" });
     }
@@ -93,7 +99,8 @@ export default {
   components: {
     Btn,
     AnimatedNumber,
-    Octocat
+    Octocat,
+    CookieConsent
   },
   created() {
     let that = this;
@@ -117,6 +124,7 @@ export default {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  overflow-x: hidden;
 
   background-color: $blue;
 

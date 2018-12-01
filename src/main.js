@@ -2,6 +2,8 @@ import Vue from 'vue';
 import App from './App.vue';
 import router from './router';
 
+Vue.use(require("vue-cookies"));
+
 Vue.config.productionTip = false;
 
 firebase.initializeApp({
@@ -33,10 +35,12 @@ Vue.mixin({
       });
     },
     trackEvent: function(eventName) {
-      gtag("event", eventName, {
-        "event_category": "click",
-        "send_to": "UA-129975491-1"
-      });
+      if(this.$cookies.get("rad_app_consent") === "true") {
+        gtag("event", eventName, {
+          "event_category": "click",
+          "send_to": "UA-129975491-1"
+        });
+      }
     }
   }
 });

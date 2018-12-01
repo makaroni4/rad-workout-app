@@ -9,7 +9,8 @@ export default {
   name: "Btn",
   props: [
     "text",
-    "modifiers"
+    "modifiers",
+    "extraCssClass"
   ],
   data() {
     return {
@@ -19,7 +20,7 @@ export default {
     cssClass: function() {
       return "btn " + (this.modifiers || []).map((m) => {
         return "btn--" + m;
-      }).join(" ");
+      }).join(" ") + " " + this.extraCssClass;
     }
   },
 }
@@ -77,6 +78,24 @@ export default {
     font-size: 14px;
     line-height: 24px;
     text-align: center;
+  }
+
+   &--empty {
+    padding: 1px 7px;
+
+    border: 1px solid $lightest-blue;
+
+    background-color: transparent;
+
+    color: $lightest-blue;
+
+    &:hover {
+      border-color: $lighter-blue;
+
+      background-color: transparent;
+
+      color: $lighter-blue;
+    }
   }
 }
 </style>

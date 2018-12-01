@@ -8,6 +8,8 @@ import PrivacyPage from './views/PrivacyPage';
 
 Vue.use(Router);
 
+Vue.use(require("vue-cookies"));
+
 const router = new Router({
   routes: [
     {
@@ -39,10 +41,12 @@ const router = new Router({
 });
 
 router.afterEach((to, from) => {
-  gtag("event", "page_view", {
-    "send_to": "UA-129975491-1",
-    "page_path": to.path
-  });
+  if($cookies.get("rad_app_consent") === "true") {
+    gtag("event", "page_view", {
+      "send_to": "UA-129975491-1",
+      "page_path": to.path
+    });
+  }
 });
 
 export default router;

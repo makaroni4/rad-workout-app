@@ -1,8 +1,8 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans|Poppins:600');
+@import "mixins.scss";
 @import "reset.scss";
 @import "grid.scss";
 @import "variables.scss";
-@import "mixins.scss";
 @import "animate.scss";
 
 p + p {

@@ -1,7 +1,6 @@
 <template>
   <div v-bind:class="pageCssClass">
     <transition
-      name="custom-classes-transition"
       v-bind:enter-active-class="fadeInCssClass"
       v-bind:leave-active-class="fadeOutCssClass"
     >
