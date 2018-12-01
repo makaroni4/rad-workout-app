@@ -8,7 +8,7 @@
         </div>
 
         <div class="cookie-consent__description">
-          <!-- eslint-disable-next-line vue/max-len -->
+          <!-- eslint-disable-next-line max-len -->
           Cookies are used to check how many people visit this page and make workouts. You consent to cookies if you continue to use this website.
         </div>
 

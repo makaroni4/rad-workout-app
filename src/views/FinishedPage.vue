@@ -5,6 +5,7 @@
         <div class="row">
           <div class="col-xs-12">
             <div class="finished-page__header">
+              <!-- eslint-disable-next-line max-len -->
               Hurrah, you’ve just completed <span class="finished-page__workouts-count" v-if="workoutsCount"><AnimatedNumber :number="workoutsCount"></AnimatedNumber>th</span> RAD workout! 👏
             </div>
 
@@ -14,6 +15,7 @@
               </p>
 
               <p>
+                <!-- eslint-disable-next-line max-len -->
                 Hi 👋 My name is Anatoli, I’m a software engineer from Berlin. If you like the workout – reward me with 0.99$, share feedback, request features or new apps. Have a great, RAD day!
               </p>
             </div>

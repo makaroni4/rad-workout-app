@@ -12,6 +12,7 @@
       </h1>
 
       <p>
+        <!-- eslint-disable-next-line max-len -->
         https://makaroni4.github.io/rad-workout-app/ is maintained by Anatoli Makarevich. This website is hosted on servers operated by GitHub Inc. This document outlines the data handling practices for this website.
       </p>
 
@@ -20,18 +21,22 @@
       </h2>
 
       <p>
+        <!-- eslint-disable-next-line max-len -->
         For analytics purposes, anonymous and aggregated data may be collected, using Google Analytics. This data includes:
 
         <ul>
           <li>
+            <!-- eslint-disable-next-line max-len -->
             <strong>Technical data:</strong> Your IP address, browser type, operating system type, hardware model (if available), location and locale (language and region), screen dimensions, browser dimensions, etc.
           </li>
 
           <li>
+            <!-- eslint-disable-next-line max-len -->
             <strong>Navigational information:</strong> What pages you access on this website, how long you spend on each page;
           </li>
 
           <li>
+            <!-- eslint-disable-next-line max-len -->
             <strong>Usage information:</strong> Analytics tied to your use of website features, such as when you start/finish the workout.
           </li>
         </ul>
