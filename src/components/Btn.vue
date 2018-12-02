@@ -18,7 +18,7 @@ export default {
   },
   computed: {
     cssClass() {
-      return `btn ${(this.modifiers || []).map(m => `btn--${m}`).join(' ')} ${this.extraCssClass || ""}`;
+      return `btn ${(this.modifiers || []).map(m => `btn--${m}`).join(' ')} ${this.extraCssClass || ''}`;
     },
   },
 };

@@ -10,47 +10,47 @@
 </style>
 
 <script>
-import Btn from "@/components/Btn.vue";
+import Btn from '@/components/Btn.vue';
+
+const networkShareUrl = {
+  facebook: 'https://www.facebook.com/sharer/sharer.php?u=',
+  twitter: 'https://twitter.com/intent/tweet?&url=',
+};
 
 export default {
-  name: "ShareBtn",
+  name: 'ShareBtn',
   props: [
-    "text",
-    "extraCssClass",
-    "network",
-    "url",
-    "modifiers"
+    'text',
+    'extraCssClass',
+    'network',
+    'url',
+    'modifiers',
   ],
   data() {
     return {
     };
   },
   methods: {
-    openPopup: function() {
-      this.trackEvent(this.network + "_share");
+    openPopup() {
+      this.trackEvent(`${this.network}_share`);
 
       window.open(
         this.sharingUrl,
         this.network,
-        "width=500,height=300,resizable,scrollbars=no,status=1"
+        'width=500,height=300,resizable,scrollbars=no,status=1',
       );
-    }
+    },
   },
   computed: {
-    cssClass: function() {
-      return "share-btn " + (this.extraCssClass || "");
+    cssClass() {
+      return `share-btn ${this.extraCssClass || ''}`;
     },
-    sharingUrl: function() {
-      if(this.network === "facebook") {
-        return "https://www.facebook.com/sharer/sharer.php?u=" + this.url;
-      } else if (this.network === "twitter") {
-        return "https://twitter.com/intent/tweet?&url=" + this.url;
-      }
-    }
+    sharingUrl() {
+      return networkShareUrl[this.network] + this.url;
+    },
   },
   components: {
-    Btn
-  }
-}
+    Btn,
+  },
+};
 </script>
-
