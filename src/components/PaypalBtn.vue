@@ -4,7 +4,7 @@
     </div>
 
     <div class="paypal-btn__copy">
-      Donate 0.99$
+      Donate 1$
     </div>
   </a>
 </template>

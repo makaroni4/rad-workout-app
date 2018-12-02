@@ -6,7 +6,7 @@
           <div class="col-xs-12">
             <div class="finished-page__header">
               <!-- eslint-disable-next-line max-len -->
-              Hurrah, you’ve just completed <span class="finished-page__workouts-count" v-if="workoutsCount"><AnimatedNumber :number="workoutsCount"></AnimatedNumber>th</span> RAD workout! 👏
+              You’ve just completed <span class="finished-page__workouts-count" v-if="workoutsCount"><AnimatedNumber :number="workoutsCount"></AnimatedNumber>th</span> RAD workout! 👏
             </div>
 
             <div class="finished-page__description">
@@ -16,12 +16,24 @@
 
               <p>
                 <!-- eslint-disable-next-line max-len -->
-                Hi 👋 My name is Anatoli, I’m a software engineer from Berlin. If you like the workout – reward me with 0.99$, share feedback, request features or new apps. Have a great, RAD day!
+                Hi 👋 My name is Anatoli, I’m a software engineer from Berlin. If you liked the workout – reward me with 1$, share feedback, request features or new apps. Have a great, RAD day!
               </p>
             </div>
 
-            <div class="finished-page__donate-cta">
-              <PaypalBtn />
+            <div class="finished-page__ctas">
+              <div class="finished-page__donate-cta finished-page__cta">
+                <PaypalBtn />
+              </div>
+
+              <ShareBtn text="Share on Facebook"
+                        extraCssClass="finished-page__cta"
+                        network="facebook"
+                        url="https://makaroni4.github.io/rad-workout-app/#/" />
+
+              <ShareBtn text="Share on Twitter"
+                        extraCssClass="finished-page__cta"
+                        network="twitter"
+                        url="https://makaroni4.github.io/rad-workout-app/#/" />
             </div>
           </div>
         </div>
@@ -36,6 +48,7 @@
 import PaypalBtn from '@/components/PaypalBtn.vue';
 import AnimatedNumber from '@/components/AnimatedNumber.vue';
 import Octocat from '@/components/Octocat.vue';
+import ShareBtn from '@/components/ShareBtn.vue';
 
 export default {
   name: 'FinishedPage',
@@ -53,6 +66,7 @@ export default {
     PaypalBtn,
     AnimatedNumber,
     Octocat,
+    ShareBtn,
   },
 };
 </script>
@@ -102,13 +116,32 @@ export default {
     }
   }
 
-  &__donate-cta {
+  &__ctas {
+    display: flex;
+    align-items: center;
     margin-top: 60px;
-    max-width: 200px;
 
     @include on_mobile {
       margin-top: 30px;
-      max-width: 100%;
+      flex-direction: column;
+    }
+  }
+
+  &__donate-cta {
+    @include on_mobile {
+      width: 100%;
+    }
+  }
+
+  &__cta {
+    & + & {
+      margin-left: 16px;
+
+      @include on_mobile {
+        width: 100%;
+        margin-left: 0;
+        margin-top: 16px;
+      }
     }
   }
 

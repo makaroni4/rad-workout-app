@@ -18,7 +18,7 @@ export default {
   },
   computed: {
     cssClass() {
-      return `btn ${(this.modifiers || []).map(m => `btn--${m}`).join(' ')} ${this.extraCssClass}`;
+      return `btn ${(this.modifiers || []).map(m => `btn--${m}`).join(' ')} ${this.extraCssClass || ""}`;
     },
   },
 };
@@ -65,6 +65,19 @@ export default {
     }
   }
 
+  &--medium {
+    min-width: 120px;
+    height: auto;
+    padding: 8px 16px;
+
+    text-decoration: none;
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 24px;
+    text-align: center;
+  }
+
   &--small {
     min-width: 80px;
     height: auto;
@@ -78,7 +91,25 @@ export default {
     text-align: center;
   }
 
-   &--empty {
+  &--facebook {
+    background-color: $fb-blue;
+
+    &:hover {
+      opacity: 0.9;
+      background-color: $fb-blue;
+    }
+  }
+
+  &--twitter {
+    background-color: $tw-blue;
+
+    &:hover {
+      opacity: 0.9;
+      background-color: $tw-blue;
+    }
+  }
+
+  &--empty {
     padding: 1px 7px;
 
     border: 1px solid $lightest-blue;
