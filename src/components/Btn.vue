@@ -126,5 +126,11 @@ export default {
       color: $lighter-blue;
     }
   }
+
+  &--full-width-xs {
+    @include on_mobile {
+      width: 100%;
+    }
+  }
 }
 </style>

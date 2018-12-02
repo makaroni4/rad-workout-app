@@ -26,11 +26,13 @@
               </div>
 
               <ShareBtn text="Share on Facebook"
+                        v-bind:modifiers="['full-width-xs']"
                         extraCssClass="finished-page__cta"
                         network="facebook"
                         url="https://makaroni4.github.io/rad-workout-app/#/" />
 
               <ShareBtn text="Share on Twitter"
+                        v-bind:modifiers="['full-width-xs']"
                         extraCssClass="finished-page__cta"
                         network="twitter"
                         url="https://makaroni4.github.io/rad-workout-app/#/" />
@@ -78,6 +80,7 @@ export default {
   display: flex;
   justify-content: center;
   align-items: center;
+  overflow-x: hidden;
 
   background-color: $blue;
 
@@ -134,11 +137,14 @@ export default {
   }
 
   &__cta {
+    @include on_mobile {
+      width: 100%;
+    }
+
     & + & {
       margin-left: 16px;
 
       @include on_mobile {
-        width: 100%;
         margin-left: 0;
         margin-top: 16px;
       }

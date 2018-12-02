@@ -1,7 +1,7 @@
 <template>
   <div v-bind:class="cssClass" v-on:click="openPopup">
     <Btn v-bind:text="text"
-         v-bind:modifiers="['medium', network]" />
+         v-bind:modifiers="modifiers.concat(['medium', network])" />
   </div>
 </template>
 
@@ -18,7 +18,8 @@ export default {
     "text",
     "extraCssClass",
     "network",
-    "url"
+    "url",
+    "modifiers"
   ],
   data() {
     return {
@@ -26,7 +27,6 @@ export default {
   },
   methods: {
     openPopup: function() {
-      console.log("HELLO")
       window.open(
         this.sharingUrl,
         this.network,
