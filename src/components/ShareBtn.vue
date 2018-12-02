@@ -27,6 +27,8 @@ export default {
   },
   methods: {
     openPopup: function() {
+      this.trackEvent(this.network + "_share");
+
       window.open(
         this.sharingUrl,
         this.network,

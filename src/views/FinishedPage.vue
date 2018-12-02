@@ -11,12 +11,8 @@
 
             <div class="finished-page__description">
               <p>
-                Message from the creator:
-              </p>
-
-              <p>
                 <!-- eslint-disable-next-line max-len -->
-                Hi 👋 My name is Anatoli, I’m a software engineer from Berlin. If you liked the workout – reward me with 1$, share feedback, request features or new apps. Have a great, RAD day!
+                Hi 👋 My name is Anatoli, I’m a software engineer from Berlin. If you liked the workout – reward me with 1$, share feedback, request features or just <a href="mailto:makaroni4+rad@gmail.com">say hi</a>. Have a great, RAD day!
               </p>
             </div>
 
