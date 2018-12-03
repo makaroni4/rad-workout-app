@@ -1,4 +1,10 @@
-# rad-workout-app
+# RAD – 3 minute workout app built with Vue.js
+
+![ezgif-2-7b5833f1b144](https://user-images.githubusercontent.com/768070/49402858-6726bd00-f74b-11e8-87d2-3fa167f853b3.gif)
+
+## Description
+
+RAD (Reactive Agility Drill) is a simple workout app built with Vue.js. It was inspired by a [Youtube video by TappBrothers](https://www.youtube.com/watch?v=7eyNh8_MGF4&t=540s) and basically acts as a partner in a workout – gives you random directions to follow and perform excercies: jump for UP, squat or push up for DOWN, side step & dip down for LEFT/RIGHT.
 
 ## Project setup
 ```
@@ -10,30 +16,9 @@ npm install
 npm run serve
 ```
 
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Run your tests
-```
-npm run test
-```
-
 ### Lints and fixes files
 ```
 npm run lint
 ```
 
-### Run your end-to-end tests
-```
-npm run test:e2e
-```
-
-### Run your unit tests
-```
-npm run test:unit
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+[Try it out!](https://makaroni4.github.io/rad-workout-app/#/)
