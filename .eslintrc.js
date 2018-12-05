@@ -14,4 +14,9 @@ module.exports = {
   parserOptions: {
     parser: 'babel-eslint',
   },
+  globals: {
+    firebase: true,
+    gtag: true,
+    $cookies: true,
+  },
 };

@@ -41,9 +41,7 @@ const router = new Router({
 });
 
 router.afterEach((to) => {
-  // eslint-disable-next-line no-undef
   if ($cookies.get('rad_app_consent') === 'true') {
-    // eslint-disable-next-line no-undef
     gtag('event', 'page_view', {
       send_to: 'UA-129975491-1',
       page_path: to.path,
